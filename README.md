@@ -1,20 +1,35 @@
-# The Algorithms - Java
 
-[![Build](https://github.com/TheAlgorithms/Java/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/TheAlgorithms/Java/actions/workflows/build.yml)
-[![codecov](https://codecov.io/gh/TheAlgorithms/Java/graph/badge.svg?token=XAdPyqTIqR)](https://codecov.io/gh/TheAlgorithms/Java)
-[![Discord chat](https://img.shields.io/discord/808045925556682782.svg?logo=discord&colorB=7289DA&style=flat-square)](https://discord.gg/c7MnfGFGa6)
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/TheAlgorithms/Java)
+// In your ARIA chat widget - works for ALL platforms
+const response = await fetch('/api/chat', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    model: 'claude-sonnet-4-6',
+    max_tokens: 1000,
+    system: 'You are ARIA, SecureID security advisor...',
+    messages: conversationHistory
+  })
+});
+const data = await response.json();
+render.yaml
+public_html/
+├── index.html              ← React build output
+├── static/                 ← React assets
+└── .htaccess               ← URL rewriting
+
+secureid-api/               ← outside public_html!
+├── server.js
+├── package.json
+└── .env
+
+/var/www/secureid/
+├── client/                 ← React build files
+│   └── build/
+├── server/
+│   ├── server.js           ← Express proxy
+│   ├── package.json
+│   └── .env                ← API key stored here
+└── ecosystem.config.js     ← PM2 process manager
 
 
-You can run and edit the algorithms, or contribute to them using Gitpod.io (a free online development environment) with a single click.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/TheAlgorithms/Java)
-
-### All algorithms are implemented in Java (for educational purposes)
-These implementations are intended for learning purposes. As such, they may be less efficient than the Java standard library.
-
-## Contribution Guidelines
-Please read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute to this project.
-
-## Algorithms
-Our [directory](DIRECTORY.md) has the full list of applications.
